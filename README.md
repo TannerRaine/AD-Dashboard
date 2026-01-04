@@ -62,6 +62,29 @@ The output is a standalone HTML file that can be shared internally or archived f
 
 This script is read only and does not modify any Active Directory objects. It is intended for reporting and visibility only.
 
+### Environment Specific Configuration
+
+Before running the script in a different environment, a few variables must be updated to match your forest and output location. These values were intentionally left as placeholders.
+
+* **Forest name**
+
+  * Variable: `$forestName`
+  * Line: **12**
+  * Description: Replace the placeholder value with the name of your Active Directory forest.
+
+* **Forest lookup**
+
+  * Line: **14**
+  * Description: Uses `$forestName` to query Active Directory. No change is required here once the forest name is set correctly.
+
+* **Output HTML file path**
+
+  * Parameter: `-FilePath`
+  * Line: **46**
+  * Description: Replace the placeholder path with a valid file path where the generated HTML dashboard should be saved.
+
+If these values are not updated, the script will not be able to query the correct forest or save the HTML output successfully.
+
 ## License
 
 This project is provided as is for educational and administrative use.
